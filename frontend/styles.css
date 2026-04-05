@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'zarathustra';
+    src: url('fonts/zarathustra-v01.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --cor-destaque: #8B0000; 
+  --cor-texto: #F5F5F5;  
+  --cor-fundo-card: #121212; 
+}
+
+body {
+    background-color: #1F2631;
+    font-family: 'zarathustra', sans-serif;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    background-color: var(--cor-fundo-card);
+    width: 90%;
+    max-width: 540px;
+    height: auto;
+    padding: 2.5rem 2.5rem 4rem 2.5rem;
+    border-radius: 1rem;
+    position: relative;
+    text-align: center;
+    color: var(--cor-texto);
+    box-sizing: border-box;
+    background-image: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.95)), url('images/frederich-nietzsche.png');
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(139, 0, 0, 0.3);
+}
+
+#advice-id {
+    color: var(--cor-destaque);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+}
+
+#quote-text {
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+    font-weight: normal;
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.divider {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+#get-advice-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--cor-destaque);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#get-advice-btn:hover {
+    box-shadow: 0 0 25px var(--cor-destaque);
+    transform: translateX(-50%) scale(1.1);
+}
+
+#get-advice-btn img {
+    width: 50%;
+    height: auto;
+}
+
